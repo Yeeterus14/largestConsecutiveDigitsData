@@ -1,12 +1,16 @@
 return {
-	{
-		["Name"] = "dookie",
+  	{
+		["Name"] = "HawluchaMegaZA",
+		['Limit'] = 200,
 		["Function"] = function(self)
-			return "swag atlanta family dolar store"
-		end,
-		["Ro-Powers"] = {
-			"4x Roaming Chance",
-			"16x Shiny Chance"
-		}
+			self:PC_sendToStore(self:newPokemon({
+				num = 701,
+				level = 10,
+				ot = 381,
+				ivs = {25, 25, 25, 25, 25, 25},
+				untradable = true
+			}))
+			return "Code Successfully Redeemed!"
+		end
 	},
 }
