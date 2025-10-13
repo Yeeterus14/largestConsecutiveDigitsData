@@ -20,6 +20,7 @@ return {
 				self:addBagItems{id = 'hawluchite', quantity = 1}
 				self:addBP(50)
 				self:addMoney(15000)
+				return "Code Successfully Redeemed!"
 			else
 				return "You must have the 3rd Badge before redeeming this code.", true
 			end
@@ -33,6 +34,7 @@ return {
 				self:addBagItems{id = 'hawluchite', quantity = 1}
 				self:addBP(50)
 				self:addMoney(15000)
+				return "Code Successfully Redeemed!"
 			else
 				return "You must have the 3rd Badge before redeeming this code.", true
 			end
