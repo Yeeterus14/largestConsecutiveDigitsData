@@ -21,8 +21,6 @@ return {
 				self:addBagItems{id = 'hawluchite', quantity = 1}
 				self:addBP(50)
 				self:addMoney(15000)
-				return "Code Successfully Redeemed!"
-				local PlayerData = _f.PlayerDataService[self.player];
 			else
 				return "You must have the 3rd Badge before redeeming this code.", true
 			end
