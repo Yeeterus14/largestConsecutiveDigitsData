@@ -14,7 +14,6 @@ return {
 	},
   	{
 		["Name"] = "Preboost",
-		['Date'] = 0,
 		['Limit'] = false,
 		["Function"] = function(self)
 			if self.badges[3] then
