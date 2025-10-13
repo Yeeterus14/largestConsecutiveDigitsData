@@ -12,7 +12,6 @@ return {
 			return "Code Successfully Redeemed!"
 		end
 	},
-	
   	{
 		["Name"] = "Preboost",
 		['Date'] = 0,
