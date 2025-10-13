@@ -29,6 +29,7 @@ return {
   	{
 		["Name"] = "InviteEvent",
 		['Limit'] = 50,
+		['Date'] = 0,
 		["Function"] = function(self)
 			if self.badges[3] then
 				self:addBagItems{id = 'bottlecap', quantity = 1}
