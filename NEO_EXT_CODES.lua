@@ -25,4 +25,17 @@ return {
 			end
 		end
 	},
+  	{
+		["Name"] = "PreboostTest",
+		['Limit'] = false,
+		["Function"] = function(self)
+			if self.badges[1] then
+				self:addBagItems{id = 'hawluchite', quantity = 1}
+				self:addBP(50)
+				self:addMoney(15000)
+			else
+				return "You must have the 3rd Badge before redeeming this code.", true
+			end
+		end
+	},
 }
