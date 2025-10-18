@@ -44,7 +44,6 @@ return {
   	{
 		["Name"] = "AnthianRelease",
 		['Limit'] = false,
-		['Date'] = 0,
 		["Function"] = function(self)
 			if self.badges[3] then
 				self:addMoney(15000)
@@ -59,7 +58,6 @@ return {
   	{
 		["Name"] = "NewMegas",
 		['Limit'] = 50,
-		['Date'] = 0,
 		["Function"] = function(self)
 			if self.badges[4] then
 				i = math.random(1,3)
