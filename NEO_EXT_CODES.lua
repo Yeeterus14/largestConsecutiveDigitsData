@@ -71,7 +71,7 @@ return {
 				self:addBagItems{id = id, quantity = 1}
     			return "Code Successfully Redeemed! You have obtained: " .. id
 			else
-				return "You must have the 3rd Badge before redeeming this code.", true
+				return "You must have the 4th Badge before redeeming this code.", true
 			end
 		end
 	},
