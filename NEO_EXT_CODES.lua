@@ -65,7 +65,7 @@ return {
 			if self.badges[4] then
 				i = math.random(1,3)
 				if i == 1 then
-				    id = 'delphoxite'
+				    id = 'greninjite'
 				elseif i == 2 then
 				    id = 'delphoxite'
 				elseif i == 3 then
