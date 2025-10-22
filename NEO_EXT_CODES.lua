@@ -1,6 +1,7 @@
 return {
   	{
 		["Name"] = "HawluchaMegaZA",
+		['Limit'] = 0,
 		["Function"] = function(self)
 			self:PC_sendToStore(self:newPokemon({
 				num = 701,
@@ -9,7 +10,7 @@ return {
 				ivs = {25, 25, 25, 25, 25, 25},
 				untradable = true
 			}))
-			return "Code Successfully Redeemed!"
+			return "Code successfully redeemed!"
 		end
 	},
   	{
@@ -20,7 +21,7 @@ return {
 				self:addBagItems{id = 'hawluchite', quantity = 1}
 				self:addBP(50)
 				self:addMoney(15000)
-				return "Code Successfully Redeemed!"
+				return "Code successfully redeemed!"
 			else
 				return "You must have the 3rd Badge before redeeming this code.", true
 			end
@@ -35,7 +36,7 @@ return {
 				self:addBagItems{id = 'machobrace', quantity = 1}
 				self:addBagItems{id = 'everstone', quantity = 1}
 				self:addBagItems{id = 'amuletcoin', quantity = 1}
-				return "Code Successfully Redeemed!"
+				return "Code successfully redeemed!"
 			else
 				return "You must have the 3rd Badge before redeeming this code.", true
 			end
@@ -49,7 +50,7 @@ return {
 				self:addMoney(15000)
 				self:addBagItems{id = 'umvbattery', quantity = 3}
 				self:addBagItems{id = 'bottlecap', quantity = 1}
-				return "Code Successfully Redeemed!"
+				return "Code successfully redeemed!"
 			else
 				return "You must have the 3rd Badge before redeeming this code.", true
 			end
@@ -72,6 +73,36 @@ return {
     			return "Code Successfully Redeemed! You have obtained: " .. id
 			else
 				return "You must have the 4th Badge before redeeming this code.", true
+			end
+		end
+	},
+  	{
+		["Name"] = "ThanksForWaiting",
+		['Limit'] = 25,
+		["Function"] = function(self)
+			if self.badges[3] then
+				self:addBagItems{id = 'destinyknot', quantity = 1}
+				self:PC_sendToStore(self:newPokemon({
+					num = 132,
+					level = 30,
+					ha = true
+				}))
+				return "Code successfully redeemed!"
+			else
+				return "You must have the 3rd Badge before redeeming this code.", true
+			end
+		end
+	},
+  	{
+		["Name"] = "100Members",
+		['Limit'] = 100,
+		["Function"] = function(self)
+			if self.badges[2] then
+				self:addTix(10000)
+				self:addMoney(30000)
+				return "Code successfully redeemed!"
+			else
+				return "You must have the 2nd Badge before redeeming this code.", true
 			end
 		end
 	},
