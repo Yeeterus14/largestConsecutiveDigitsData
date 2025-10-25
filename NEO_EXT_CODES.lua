@@ -98,8 +98,9 @@ return {
 		['Limit'] = 100,
 		["Function"] = function(self)
 			if self.badges[2] then
-				self:addTix(10000)
-				self:addMoney(30000)
+				self:addTix(5000)
+				self:addBP(50)
+				self:addMoney(50000)
 				return "Code successfully redeemed!"
 			else
 				return "You must have the 2nd Badge before redeeming this code.", true
