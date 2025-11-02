@@ -44,7 +44,7 @@ return {
 	},
   	{
 		["Name"] = "AnthianRelease",
-		['Limit'] = false,
+		['Limit'] = 0,
 		["Function"] = function(self)
 			if self.badges[3] then
 				self:addMoney(15000)
@@ -104,6 +104,19 @@ return {
 				return "Code successfully redeemed!"
 			else
 				return "You must have the 2nd Badge before redeeming this code.", true
+			end
+		end
+	},
+  	{
+		["Name"] = "WaraReupload",
+		['Limit'] = 50,
+		["Function"] = function(self)
+			if self.badges[4] then
+				self:addBagItems{id = 'bottlecap', quantity = 1}
+				self:addBP(50)
+				return "Code successfully redeemed!"
+			else
+				return "You must have the 3rd Badge before redeeming this code.", true
 			end
 		end
 	},
