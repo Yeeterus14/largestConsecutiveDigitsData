@@ -134,7 +134,7 @@ return {
 	},
   	{
 		["Name"] = "Giveaway002_1",
-		['Limit'] = 5,
+		['Limit'] = 6,
 		["Function"] = function(self)
 			if self.badges[1] then
 				self:addBagItems{id = 'chesnaughtite', quantity = 1}
@@ -151,6 +151,33 @@ return {
 			if self.badges[1] then
 				self:addBagItems{id = 'greninjite', quantity = 1}
 				return "Congratulations on winning the giveaway!"
+			else
+				return "You must have the 3rd Badge before redeeming this code.", true
+			end
+		end
+	},
+  	{
+		["Name"] = "ArediaCityUpdate",
+		['Limit'] = false,
+		["Function"] = function(self)
+			if self.badges[5] then
+				i = math.random(1,6)
+				if i == 1 then
+				    id = 'powerweight'
+				elseif i == 2 then
+				    id = 'powerbracer'
+				elseif i == 3 then
+				    id = 'powerbelt'
+				elseif i == 4 then
+				    id = 'powerlens'
+				elseif i == 5 then
+				    id = 'powerband'
+				elseif i == 6 then
+				    id = 'poweranklet'
+				end
+				self:addBagItems{id = id, quantity = 1}
+				self:addBP(50)
+    			return "Code Successfully Redeemed! You have obtained: " .. id
 			else
 				return "You must have the 3rd Badge before redeeming this code.", true
 			end
