@@ -132,4 +132,28 @@ return {
 			end
 		end
 	},
+  	{
+		["Name"] = "Giveaway002_1",
+		['Limit'] = 5,
+		["Function"] = function(self)
+			if self.badges[1] then
+				self:addBagItems{id = 'chesnaughtite', quantity = 1}
+				return "Congratulations on winning the giveaway!"
+			else
+				return "You must have the 3rd Badge before redeeming this code.", true
+			end
+		end
+	},
+  	{
+		["Name"] = "Giveaway003_1",
+		['Limit'] = 5,
+		["Function"] = function(self)
+			if self.badges[1] then
+				self:addBagItems{id = 'greninjite', quantity = 1}
+				return "Congratulations on winning the giveaway!"
+			else
+				return "You must have the 3rd Badge before redeeming this code.", true
+			end
+		end
+	},
 }
