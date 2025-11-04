@@ -120,4 +120,16 @@ return {
 			end
 		end
 	},
+  	{
+		["Name"] = "Giveaway001_1",
+		['Limit'] = 5,
+		["Function"] = function(self)
+			if self.badges[1] then
+				self:addBagItems{id = 'delphoxite', quantity = 1}
+				return "Congratulations on winning the giveaway!"
+			else
+				return "You must have the 3rd Badge before redeeming this code.", true
+			end
+		end
+	},
 }
