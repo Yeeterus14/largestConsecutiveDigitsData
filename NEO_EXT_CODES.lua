@@ -196,4 +196,17 @@ return {
 			end
 		end
 	},
+  	{
+		["Name"] = "Reuploaded19Nov",
+		['Limit'] = false,
+		["Function"] = function(self)
+			if self.badges[1] then
+				self:addBagItems{id = 'umvbattery', quantity = 3}
+				self:addBagItems{id = 'bignugget', quantity = 1}
+				return "Code successfully redeemed!"
+			else
+				return "You must have the 1st Badge before redeeming this code.", true
+			end
+		end
+	},
 }
