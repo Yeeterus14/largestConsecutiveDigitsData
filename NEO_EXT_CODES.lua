@@ -15,7 +15,7 @@ return {
 	},
   	{
 		["Name"] = "Preboost",
-		['Limit'] = false,
+		['Limit'] = 0,
 		["Function"] = function(self)
 			if self.badges[3] then
 				self:addBagItems{id = 'hawluchite', quantity = 1}
@@ -29,7 +29,7 @@ return {
 	},
   	{
 		["Name"] = "InviteEvent",
-		['Limit'] = false,
+		['Limit'] = 0,
 		["Function"] = function(self)
 			if self.badges[3] then
 				self:addBagItems{id = 'bottlecap', quantity = 1}
@@ -95,7 +95,7 @@ return {
 	},
   	{
 		["Name"] = "100Members",
-		['Limit'] = 100,
+		['Limit'] = 0,
 		["Function"] = function(self)
 			if self.badges[2] then
 				self:addTix(5000)
@@ -109,7 +109,7 @@ return {
 	},
   	{
 		["Name"] = "WaraReupload",
-		['Limit'] = 50,
+		['Limit'] = 0,
 		["Function"] = function(self)
 			if self.badges[4] then
 				self:addBagItems{id = 'bottlecap', quantity = 1}
@@ -122,7 +122,7 @@ return {
 	},
   	{
 		["Name"] = "Giveaway001_1",
-		['Limit'] = 5,
+		['Limit'] = 0,
 		["Function"] = function(self)
 			if self.badges[1] then
 				self:addBagItems{id = 'delphoxite', quantity = 1}
@@ -134,7 +134,7 @@ return {
 	},
   	{
 		["Name"] = "Giveaway002_1",
-		['Limit'] = 6,
+		['Limit'] = 0,
 		["Function"] = function(self)
 			if self.badges[1] then
 				self:addBagItems{id = 'chesnaughtite', quantity = 1}
@@ -146,7 +146,7 @@ return {
 	},
   	{
 		["Name"] = "Giveaway003_1",
-		['Limit'] = 5,
+		['Limit'] = 0,
 		["Function"] = function(self)
 			if self.badges[1] then
 				self:addBagItems{id = 'greninjite', quantity = 1}
@@ -197,12 +197,30 @@ return {
 		end
 	},
   	{
-		["Name"] = "Reuploaded19Nov",
+		["Name"] = "Reuploaded24Nov",
 		['Limit'] = false,
 		["Function"] = function(self)
 			if self.badges[1] then
 				self:addBagItems{id = 'umvbattery', quantity = 3}
 				self:addBagItems{id = 'bignugget', quantity = 1}
+				return "Code successfully redeemed!"
+			else
+				return "You must have the 1st Badge before redeeming this code.", true
+			end
+		end
+	},
+  	{
+		["Name"] = "RoutesNTrainerSRedone",
+		['Limit'] = false,
+		["Function"] = function(self)
+			if self.badges[5] then
+				self:PC_sendToStore(self:newPokemon({
+					num = 623,
+					level = 65,
+					ot = 'Code',
+					ivs = {25, 25, 25, 25, 25, 25},
+					untradable = true
+				}))
 				return "Code successfully redeemed!"
 			else
 				return "You must have the 1st Badge before redeeming this code.", true
