@@ -158,7 +158,7 @@ return {
 	},
   	{
 		["Name"] = "ArediaCityUpdate",
-		['Limit'] = false,
+		['Limit'] = 999999999,
 		["Function"] = function(self)
 			if self.badges[5] then
 				i = math.random(1,6)
@@ -185,7 +185,7 @@ return {
 	},
   	{
 		["Name"] = "Reuploaded15Nov",
-		['Limit'] = false,
+		['Limit'] = 999999999,
 		["Function"] = function(self)
 			if self.badges[1] then
 				self:addBagItems{id = 'umvbattery', quantity = 3}
@@ -198,7 +198,7 @@ return {
 	},
   	{
 		["Name"] = "RoutesNTrainerSRedone",
-		['Limit'] = false,
+		['Limit'] = 999999999,
 		["Function"] = function(self)
 			if self.badges[5] then
 				self:PC_sendToStore(self:newPokemon({
