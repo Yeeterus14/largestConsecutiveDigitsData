@@ -179,7 +179,7 @@ return {
 				self:addBP(50)
     			return "Code Successfully Redeemed! You have obtained: " .. id
 			else
-				return "You must have the 3rd Badge before redeeming this code.", true
+				return "You must have the 5th Badge before redeeming this code.", true
 			end
 		end
 	},
@@ -190,19 +190,6 @@ return {
 			if self.badges[1] then
 				self:addBagItems{id = 'umvbattery', quantity = 3}
 				self:addBagItems{id = 'bignugget', quantity = 3}
-				return "Code successfully redeemed!"
-			else
-				return "You must have the 1st Badge before redeeming this code.", true
-			end
-		end
-	},
-  	{
-		["Name"] = "Reuploaded24Nov",
-		['Limit'] = false,
-		["Function"] = function(self)
-			if self.badges[1] then
-				self:addBagItems{id = 'umvbattery', quantity = 3}
-				self:addBagItems{id = 'bignugget', quantity = 1}
 				return "Code successfully redeemed!"
 			else
 				return "You must have the 1st Badge before redeeming this code.", true
@@ -223,7 +210,27 @@ return {
 				}))
 				return "Code successfully redeemed!"
 			else
-				return "You must have the 1st Badge before redeeming this code.", true
+				return "You must have the 5th Badge before redeeming this code.", true
+			end
+		end
+	},
+  	{
+		["Name"] = "NewMegas2",
+		['Limit'] = 50,
+		["Function"] = function(self)
+			if self.badges[4] then
+				i = math.random(1,3)
+				if i == 1 then
+				    id = 'scolipite'
+				elseif i == 2 then
+				    id = 'chandelurite'
+				elseif i == 3 then
+				    id = 'scraftinite'
+				end
+				self:addBagItems{id = id, quantity = 1}
+    			return "Code Successfully Redeemed! You have obtained: " .. id
+			else
+				return "You must have the 4th Badge before redeeming this code.", true
 			end
 		end
 	},
