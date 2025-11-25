@@ -234,4 +234,16 @@ return {
 			end
 		end
 	},
+  	{
+		["Name"] = "BottleCapApology_001",
+		['Limit'] = 25,
+		["Function"] = function(self)
+			if self.badges[4] then
+				self:addBagItems{id = 'bottlecap', quantity = 1}
+				return "Code successfully redeemed!"
+			else
+				return "You must have the 4th Badge before redeeming this code.", true
+			end
+		end
+	},
 }
