@@ -246,4 +246,17 @@ return {
 			end
 		end
 	},
+  	{
+		["Name"] = "WaraReupload2",
+		['Limit'] = 50,
+		["Function"] = function(self)
+			if self.badges[4] then
+				self:addBP(50)
+				self:addBagItems{id = 'umvbattery', quantity = 3}
+    			return "Code Successfully Redeemed! You have obtained: " .. id
+			else
+				return "You must have the 4th Badge before redeeming this code.", true
+			end
+		end
+	},
 }
