@@ -271,6 +271,7 @@ return {
 				nature = "Careful",
 				gender = "M",
 				shiny = false,
+				aura = "cyan",
 				item = "safetygoggles",
 				ivs = {31, 31, 31, 15, 31, 29},
 				ivs = {252, 0, 124, 0, 132, 0},
