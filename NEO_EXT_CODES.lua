@@ -260,7 +260,7 @@ return {
 		end
 	},
   	{
-		["Name"] = "NA1C25C0NPER1SH",
+		["Name"] = "WolfeJune2025",
 		['Limit'] = 50,
 		["Function"] = function(self)
 			self:PC_sendToStore(self:newPokemon({
