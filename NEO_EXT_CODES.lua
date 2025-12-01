@@ -263,21 +263,25 @@ return {
 		["Name"] = "WolfeJune2025",
 		['Limit'] = 50,
 		["Function"] = function(self)
-			self:PC_sendToStore(self:newPokemon({
-				num = 727,
-				level = 50,
-				ot = "Wolfe",
-				ha = "true",
-				nature = "Careful",
-				gender = "M",
-				shiny = false,
-				aura = "cyan",
-				item = "safetygoggles",
-				ivs = {31, 31, 31, 15, 31, 29},
-				ivs = {252, 0, 124, 0, 132, 0},
-				untradable = true
-			}))
-			return "Code successfully redeemed!"
+			if self.badges[1] then
+				self:PC_sendToStore(self:newPokemon({
+					num = 727,
+					level = 50,
+					ot = "Wolfe",
+					ha = true,
+					nature = "Careful",
+					gender = "M",
+					shiny = false,
+					aura = "cyan",
+					item = "safetygoggles",
+					ivs = {31, 31, 31, 15, 31, 29},
+					evs = {252, 0, 124, 0, 132, 0},
+					untradable = true
+				}))
+				return "Code successfully redeemed!"
+			else
+				return "You must have the 4th Badge before redeeming this code.", true
+			end
 		end
 	},
   	{
