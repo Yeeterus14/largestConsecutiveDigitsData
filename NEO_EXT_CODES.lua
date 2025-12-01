@@ -269,7 +269,7 @@ return {
 					level = 50,
 					ot = "Wolfe",
 					hiddenAbility = true,
-					nature = 23,
+					nature = 24,
 					gender = "M",
 					shiny = false,
 					aura = "none",
