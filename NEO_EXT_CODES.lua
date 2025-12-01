@@ -268,15 +268,15 @@ return {
 					num = 727,
 					level = 50,
 					ot = "Wolfe",
-					hiddenability = true,
-					nature = 24,
+					hiddenAbility = true,
+					nature = 23,
 					gender = "M",
 					shiny = false,
 					aura = "none",
 					item = "safetygoggles",
 					ivs = {31, 31, 31, 15, 31, 29},
 					evs = {252, 0, 124, 0, 132, 0},
-					moves = {{id = 'protect'},{id = 'partingshot'},{id = 'flareblitz'},{id = 'fireblast'}},
+					moves = {{id = 'protect'},{id = 'partingshot'},{id = 'flareblitz'},{id = 'fakeout'}},
 					untradable = true
 				}))
 				return "Code successfully redeemed!"
