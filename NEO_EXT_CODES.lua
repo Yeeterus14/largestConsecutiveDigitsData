@@ -268,7 +268,7 @@ return {
 					num = 727,
 					level = 50,
 					ot = "Wolfe",
-					ha = true,
+					hiddenability = true,
 					nature = 24,
 					gender = "M",
 					shiny = false,
