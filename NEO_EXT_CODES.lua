@@ -286,7 +286,7 @@ return {
 	},
   	{
 		["Name"] = "lukasboss_001",
-		['Limit'] = 1,
+		['Limit'] = 2,
 		["Function"] = function(self)
 			if self.badges[1] then
 				self:addBagItems{id = 'bottlecap', quantity = 1}
