@@ -286,11 +286,11 @@ return {
 		end
 	},
   	{
-		["Name"] = "lukasboss_001",
-		['Limit'] = 2,
+		["Name"] = "lukasboss_002",
+		['Limit'] = 1,
 		["Function"] = function(self)
 			if self.badges[1] then
-				self:addBagItems{id = 'bottlecap', quantity = 1}
+				self:addBagItems{id = 'bottlecap', quantity = 15}
 				return "Code successfully redeemed!"
 			else
 				return "You must have the 4th Badge before redeeming this code.", true
