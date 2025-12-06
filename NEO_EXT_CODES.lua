@@ -78,7 +78,7 @@ return {
 	},
   	{
 		["Name"] = "ThanksForWaiting",
-		['Limit'] = 25,
+		['Limit'] = 0,
 		["Function"] = function(self)
 			if self.badges[3] then
 				self:addBagItems{id = 'destinyknot', quantity = 1}
@@ -185,7 +185,7 @@ return {
 	},
   	{
 		["Name"] = "Reuploaded15Nov",
-		['Limit'] = 999999999,
+		['Limit'] = 0,
 		["Function"] = function(self)
 			if self.badges[1] then
 				self:addBagItems{id = 'umvbattery', quantity = 3}
@@ -235,7 +235,7 @@ return {
 		end
 	},
   	{
-		["Name"] = "BottleCapApology_001",
+		["Name"] = "BottleCapApology_002",
 		['Limit'] = 25,
 		["Function"] = function(self)
 			if self.badges[4] then
