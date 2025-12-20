@@ -235,7 +235,7 @@ return {
 		end
 	},
   	{
-		["Name"] = "BottleCapApology_002",
+		["Name"] = "BottleCapApology_003",
 		['Limit'] = 25,
 		["Function"] = function(self)
 			if self.badges[4] then
@@ -286,15 +286,49 @@ return {
 		end
 	},
   	{
-		["Name"] = "lukasboss_002",
-		['Limit'] = 1,
+		["Name"] = "MerryXmas2025",
+		['Limit'] = 100,
 		["Function"] = function(self)
-			if self.badges[1] then
-				self:addBagItems{id = 'bottlecap', quantity = 15}
-				return "Code successfully redeemed!"
+			if self.badges[4] then
+			    local rewardPool = {
+			        {id = "bignugget", quantity = 3},
+			        {id = "bigmushroom", quantity = 3},
+			        {id = "hawluchite", quantity = 1},
+			        {id = "greninjite", quantity = 1},
+			        {id = "delphoxite", quantity = 1},
+			        {id = "chesnaughtite", quantity = 1},
+			        {id = "chandelurite", quantity = 1},
+			        {id = "scraftinite", quantity = 1},
+			        {id = "scolipite", quantity = 1},
+			        {id = "clefablite", quantity = 1},
+			        {id = "victreebelite", quantity = 1},
+			        {id = "starminite", quantity = 1},
+			        {id = "dragoninite", quantity = 1},
+			        {id = "meganiumite", quantity = 1},
+			        {id = "feraligite", quantity = 1},
+			        {id = "skarmorite", quantity = 1},
+			        {id = "froslassite", quantity = 1},
+			        {id = "emboarite", quantity = 1},
+			        {id = "excadrite", quantity = 1},
+			        {id = "eelektrossite", quantity = 1},
+			        {id = "pyroarite", quantity = 1},
+			        {id = "floettite", quantity = 1},
+			        {id = "malamarite", quantity = 1},
+			        {id = "barbaracite", quantity = 1},
+			        {id = "dragalgite", quantity = 1},
+			        {id = "zygardite", quantity = 1},
+			        {id = "drampanite", quantity = 1},
+			        {id = "falinksite", quantity = 1},
+			    }
+			
+			    local reward = rewardPool[math.random(#rewardPool)]
+			    self:addBagItems({ id = reward.id, quantity = reward.quantity })
+			
+			    return "Code Successfully Redeemed! You have obtained: " .. reward.quantity .. "x " .. reward.id
 			else
-				return "You must have the 4th Badge before redeeming this code.", true
+			    return "You must have the 4th Badge before redeeming this code.", true
 			end
 		end
 	},
+	
 }
