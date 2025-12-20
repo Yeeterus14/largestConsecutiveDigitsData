@@ -291,8 +291,6 @@ return {
 		["Function"] = function(self)
 			if self.badges[4] then
 			    local rewardPool = {
-			        {id = "bignugget", quantity = 3},
-			        {id = "bigmushroom", quantity = 3},
 			        {id = "hawluchite", quantity = 1},
 			        {id = "greninjite", quantity = 1},
 			        {id = "delphoxite", quantity = 1},
