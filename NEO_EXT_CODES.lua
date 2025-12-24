@@ -146,7 +146,7 @@ return {
 	},
   	{
 		["Name"] = "Giveaway003_1",
-		['Limit'] = 0,
+		['Limit'] = 5,
 		["Function"] = function(self)
 			if self.badges[1] then
 				self:addBagItems{id = 'greninjite', quantity = 1}
