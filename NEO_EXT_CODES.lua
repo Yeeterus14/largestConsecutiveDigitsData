@@ -328,5 +328,25 @@ return {
 			end
 		end
 	},
+  	{
+		["Name"] = "NewMegas3",
+		['Limit'] = 50,
+		["Function"] = function(self)
+			if self.badges[4] then
+				i = math.random(1,3)
+				if i == 1 then
+				    id = 'starminite'
+				elseif i == 2 then
+				    id = 'skarmorite'
+				elseif i == 3 then
+				    id = 'dragalgite'
+				end
+				self:addBagItems{id = id, quantity = 1}
+    			return "Code Successfully Redeemed! You have obtained: " .. id
+			else
+				return "You must have the 4th Badge before redeeming this code.", true
+			end
+		end
+	},
 	
 }
