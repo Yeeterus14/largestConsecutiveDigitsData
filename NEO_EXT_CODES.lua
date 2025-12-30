@@ -60,7 +60,7 @@ return {
 		["Name"] = "NewMegas",
 		['Limit'] = 50,
 		["Function"] = function(self)
-			if self.badges[4] then
+			if self.badges[1] then
 				i = math.random(1,3)
 				if i == 1 then
 				    id = 'greninjite'
@@ -72,7 +72,7 @@ return {
 				self:addBagItems{id = id, quantity = 1}
     			return "Code Successfully Redeemed! You have obtained: " .. id
 			else
-				return "You must have the 4th Badge before redeeming this code.", true
+				return "You must have the 1st Badge before redeeming this code.", true
 			end
 		end
 	},
@@ -218,7 +218,7 @@ return {
 		["Name"] = "NewMegas2",
 		['Limit'] = 50,
 		["Function"] = function(self)
-			if self.badges[4] then
+			if self.badges[1] then
 				i = math.random(1,3)
 				if i == 1 then
 				    id = 'scolipite'
@@ -230,7 +230,7 @@ return {
 				self:addBagItems{id = id, quantity = 1}
     			return "Code Successfully Redeemed! You have obtained: " .. id
 			else
-				return "You must have the 4th Badge before redeeming this code.", true
+				return "You must have the 1st Badge before redeeming this code.", true
 			end
 		end
 	},
@@ -332,7 +332,7 @@ return {
 		["Name"] = "NewMegas3",
 		['Limit'] = 50,
 		["Function"] = function(self)
-			if self.badges[4] then
+			if self.badges[1] then
 				i = math.random(1,3)
 				if i == 1 then
 				    id = 'starminite'
@@ -344,7 +344,7 @@ return {
 				self:addBagItems{id = id, quantity = 1}
     			return "Code Successfully Redeemed! You have obtained: " .. id
 			else
-				return "You must have the 4th Badge before redeeming this code.", true
+				return "You must have the 1st Badge before redeeming this code.", true
 			end
 		end
 	},
