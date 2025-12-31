@@ -348,5 +348,19 @@ return {
 			end
 		end
 	},
+  	{
+		["Name"] = "TripleBoosters",
+		['Limit'] = 300,
+		["Function"] = function(self)
+			if self.badges[2] then
+				self:addTix(2500)
+				self:addBP(50)
+				self:addMoney(25000)
+				return "Code successfully redeemed!"
+			else
+				return "You must have the 2nd Badge before redeeming this code.", true
+			end
+		end
+	},
 	
 }
