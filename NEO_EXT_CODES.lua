@@ -362,5 +362,18 @@ return {
 			end
 		end
 	},
+  	{
+		["Name"] = "whatthesigma",
+		['Limit'] = 150,
+		["Function"] = function(self)
+			if self.badges[3] then
+				self:addBP(50)
+				self:addBagItems{id = 'abilitycapsule', quantity = 1}
+				return "Code successfully redeemed!"
+			else
+				return "You must have the 3rd Badge before redeeming this code.", true
+			end
+		end
+	},
 	
 }
