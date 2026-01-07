@@ -375,5 +375,20 @@ return {
 			end
 		end
 	},
+  	{
+		["Name"] = "34kMembers",
+		['Limit'] = 234,
+		["Function"] = function(self)
+			if self.badges[3] then
+				self:addBagItems{id = 'expertbelt', quantity = 1}
+				self:addBagItems{id = 'leftovers', quantity = 1}
+				self:addBagItems{id = 'maxrevive', quantity = 3}
+				self:addBagItems{id = 'bignugget', quantity = 3}
+				return "Code successfully redeemed!"
+			else
+				return "You must have the 3rd Badge before redeeming this code.", true
+			end
+		end
+	},
 	
 }
