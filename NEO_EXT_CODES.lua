@@ -108,19 +108,6 @@ return {
 		end
 	},
   	{
-		["Name"] = "WaraReupload",
-		['Limit'] = 0,
-		["Function"] = function(self)
-			if self.badges[4] then
-				self:addBagItems{id = 'bottlecap', quantity = 1}
-				self:addBP(50)
-				return "Code successfully redeemed!"
-			else
-				return "You must have the 3rd Badge before redeeming this code.", true
-			end
-		end
-	},
-  	{
 		["Name"] = "Giveaway001_1",
 		['Limit'] = 0,
 		["Function"] = function(self)
@@ -247,11 +234,11 @@ return {
 		end
 	},
   	{
-		["Name"] = "WaraReupload2",
-		['Limit'] = 50,
+		["Name"] = "WaraReupload3",
+		['Limit'] = 100,
 		["Function"] = function(self)
 			if self.badges[4] then
-				self:addBP(50)
+				self:addBagItems{id = 'shinypotion', quantity = 1}
 				self:addBagItems{id = 'umvbattery', quantity = 3}
     			return "Code successfully Redeemed!"
 			else
