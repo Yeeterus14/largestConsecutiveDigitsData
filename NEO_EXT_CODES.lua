@@ -379,7 +379,7 @@ return {
 	},
   	{
 		["Name"] = "GomenOomfs",
-		['Limit'] = 234,
+		['Limit'] = 250,
 		["Function"] = function(self)
 			if self.badges[3] then
 				self:addBagItems{id = 'protein', quantity = 10}
