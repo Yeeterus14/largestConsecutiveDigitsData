@@ -222,7 +222,7 @@ return {
 		end
 	},
   	{
-		["Name"] = "BottleCapApology_003",
+		["Name"] = "BottleCapApology_004",
 		['Limit'] = 25,
 		["Function"] = function(self)
 			if self.badges[4] then
@@ -234,7 +234,7 @@ return {
 		end
 	},
   	{
-		["Name"] = "WaraReupload3",
+		["Name"] = "WaraReupload4",
 		['Limit'] = 100,
 		["Function"] = function(self)
 			if self.badges[4] then
@@ -371,6 +371,23 @@ return {
 				self:addBagItems{id = 'leftovers', quantity = 1}
 				self:addBagItems{id = 'maxrevive', quantity = 3}
 				self:addBagItems{id = 'bignugget', quantity = 3}
+				return "Code successfully redeemed!"
+			else
+				return "You must have the 3rd Badge before redeeming this code.", true
+			end
+		end
+	},
+  	{
+		["Name"] = "GomenOomfs",
+		['Limit'] = 234,
+		["Function"] = function(self)
+			if self.badges[3] then
+				self:addBagItems{id = 'protein', quantity = 10}
+				self:addBagItems{id = 'calcium', quantity = 10}
+				self:addBagItems{id = 'iron', quantity = 10}
+				self:addBagItems{id = 'zinc', quantity = 10}
+				self:addBagItems{id = 'carbos', quantity = 10}
+				self:addBagItems{id = 'hpup', quantity = 10}
 				return "Code successfully redeemed!"
 			else
 				return "You must have the 3rd Badge before redeeming this code.", true
