@@ -394,5 +394,23 @@ return {
 			end
 		end
 	},
+  	{
+		["Name"] = "CadetsArmor",
+		['Limit'] = 999999999,
+		["Function"] = function(self)
+			if self.badges[3] then
+				i = math.random(1,6)
+				if i == 1 then
+				    id = 'auspiciousarmor'
+				elseif i == 2 then
+				    id = 'maliciousarmor'
+				end
+				self:addBagItems{id = id, quantity = 1}
+    			return "Code Successfully Redeemed! You have obtained: " .. id
+			else
+				return "You must have the 3rd Badge before redeeming this code.", true
+			end
+		end
+	},
 	
 }
