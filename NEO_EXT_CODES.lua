@@ -399,7 +399,7 @@ return {
 		['Limit'] = 999999999,
 		["Function"] = function(self)
 			if self.badges[3] then
-				i = math.random(1,6)
+				i = math.random(1,2)
 				if i == 1 then
 				    id = 'auspiciousarmor'
 				elseif i == 2 then
