@@ -412,5 +412,39 @@ return {
 			end
 		end
 	},
+  	{
+		["Name"] = "NeoLegacyFebruary",
+		['Limit'] = 100,
+		["Function"] = function(self)
+			if self.badges[4] then
+				local rewardPool = {
+				    {id = "golurkite", quantity = 1},
+				    {id = "glimmoranite", quantity = 1},
+				    {id = "golisopodite", quantity = 1},
+				    {id = "heatranite", quantity = 1},
+				    {id = "lucarionitez", quantity = 1},
+				    {id = "magearnite", quantity = 1},
+				    {id = "meowsticite", quantity = 1},
+				    {id = "raichunitex", quantity = 1},
+				    {id = "raichunitey", quantity = 1},
+				    {id = "scovillainite", quantity = 1},
+				    {id = "staraptite", quantity = 1},
+				    {id = "tatsugirinite", quantity = 1},
+				    {id = "zeraorite", quantity = 1},
+				    {id = "absolite_z", quantity = 1},
+				    {id = "baxcalibrite", quantity = 1},
+				    {id = "chimechonite", quantity = 1},
+				    {id = "crabominite", quantity = 1},
+				}
+				
+			    local reward = rewardPool[math.random(#rewardPool)]
+			    self:addBagItems({ id = reward.id, quantity = reward.quantity })
+			
+			    return "Code Successfully Redeemed! You have obtained: " .. reward.quantity .. "x " .. reward.id
+			else
+			    return "You must have the 4th Badge before redeeming this code.", true
+			end
+		end
+	},
 	
 }
