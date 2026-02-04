@@ -437,7 +437,21 @@ return {
 			    local reward = rewardPool[math.random(#rewardPool)]
 			    self:addBagItems({ id = reward.id, quantity = reward.quantity })
 			
-			    return "Code Successfully Redeemed! You have obtained: " .. reward.quantity .. "x " .. reward.id
+			    return "Code successfully redeemed! You have obtained: " .. reward.quantity .. "x " .. reward.id
+			else
+			    return "You must have the 4th Badge before redeeming this code.", true
+			end
+		end
+	},
+  	{
+		["Name"] = "Garchud",
+		['Limit'] = 100,
+		["Function"] = function(self)
+			if self.badges[6] then
+				self:addBP(50)
+				self:addBagItems{id = 'garchompite', quantity = 1}
+			
+			    return "Code successfully redeemed!"
 			else
 			    return "You must have the 4th Badge before redeeming this code.", true
 			end
