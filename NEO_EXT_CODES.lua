@@ -457,5 +457,17 @@ return {
 			end
 		end
 	},
-	
+  	{
+		["Name"] = "PlayTheGameMoreAndInviteYourFriends",
+		['Limit'] = 99999,
+		["Function"] = function(self)
+			if self.badges[1] then
+				self:addBagItems{id = 'wishingpiece', quantity = 3}
+			
+			    return "Code successfully redeemed!"
+			else
+			    return "You must have the 4th Badge before redeeming this code.", true
+			end
+		end
+	},
 }
