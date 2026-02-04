@@ -453,7 +453,7 @@ return {
 			
 			    return "Code successfully redeemed!"
 			else
-			    return "You must have the 4th Badge before redeeming this code.", true
+			    return "You must have the 6th Badge before redeeming this code.", true
 			end
 		end
 	},
