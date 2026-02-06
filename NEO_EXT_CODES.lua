@@ -268,11 +268,10 @@ return {
 	},
   	{
 		["Name"] = "PlayTheGameMoreAndInviteYourFriends",
-		['Limit'] = 99999,
+		['Limit'] = 100,
 		["Function"] = function(self)
 			if self.badges[1] then
 				self:addBagItems{id = 'wishingpiece', quantity = 3}
-			
 			    return "Code successfully redeemed!"
 			else
 			    return "You must have the 4th Badge before redeeming this code.", true
@@ -281,14 +280,7 @@ return {
 	},
   	{
 		["Name"] = "EnterYourLegacy",
-		['Limit'] = 9999999	9,
-		["Function"] = function(self)
-			self:addBagItems{id = 'wishingpiece', quantity = 3}
-		end
-	},
-  	{
-		["Name"] = "WeAreNeoLegacy",
-		['Limit'] = 300,
+		['Limit'] = 9999999999,
 		["Function"] = function(self)
 			i = math.random(1,6)
 			if i == 1 then
@@ -305,9 +297,11 @@ return {
 				id = 'poweranklet'
 			end
 			self:addBagItems{id = id, quantity = 1}
-			self:addTix(2500)
-			self:addBP(50)
-			self:addMoney(25000)
+			self:addTix(1000)
+			self:addBP(20)
+			self:addMoney(5000)
+			self:addBagItems{id = 'pokeball', quantity = 15}
+			self:addBagItems{id = 'greatball', quantity = 5}
 			return "Code Successfully Redeemed! You have obtained: " .. id
 		end
 	},
