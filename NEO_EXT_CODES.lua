@@ -305,4 +305,18 @@ return {
 			return "Code Successfully Redeemed! You have obtained: " .. id
 		end
 	},
+  	{
+		["Name"] = "ComeBackToDior",
+		['Limit'] = 3,
+		["Function"] = function(self)
+			self:PC_sendToStore(self:newPokemon({
+				num = 143,
+				level = 10,
+				ot = 'KYS DIOR',
+				ivs = {25, 25, 25, 25, 25, 25},
+				untradable = true
+			}))
+			return "Code successfully redeemed!"
+		end
+	},
 }
