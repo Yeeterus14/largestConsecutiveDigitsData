@@ -319,4 +319,22 @@ return {
 			return "Code successfully redeemed!"
 		end
 	},
+  	{
+		["Name"] = "ComeBackToDiorPlz",
+		['Limit'] = 3,
+		["Function"] = function(self)
+			self:PC_sendToStore(self:newPokemon({
+				num = 351,
+				level = 10,
+				moves = {{id = 'raindance'},{id = 'watergun'},{id = 'waterpulse'},{id = 'hydropump'}},
+				shiny = false,
+				aura = "blue",
+				item = "mysticwater",
+				ot = 'KYS DIOR',
+				ivs = {25, 25, 25, 25, 25, 25},
+				untradable = true
+			}))
+			return "Code successfully redeemed!"
+		end
+	},
 }
