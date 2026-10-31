@@ -337,4 +337,12 @@ return {
 			return "Code successfully redeemed!"
 		end
 	},
+  	{
+		["Name"] = "NeoLegacyLovesYou",
+		['Limit'] = 100,
+		["Function"] = function(self)
+			self:addBagItems{id = 'umvbattery', quantity = 5}
+			return "Code successfully Redeemed! Enjoy your UMV batteries!"
+		end
+	},
 }
