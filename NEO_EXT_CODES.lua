@@ -306,43 +306,27 @@ return {
 		end
 	},
   	{
-		["Name"] = "ComeBackToDior",
-		['Limit'] = 3,
-		["Function"] = function(self)
-			self:PC_sendToStore(self:newPokemon({
-				num = 143,
-				level = 10,
-				ot = 'KYS DIOR',
-				ivs = {25, 25, 25, 25, 25, 25},
-				untradable = true
-			}))
-			return "Code successfully redeemed!"
-		end
-	},
-  	{
-		["Name"] = "ComeBackToDiorPlz",
-		['Limit'] = 3,
-		["Function"] = function(self)
-			self:PC_sendToStore(self:newPokemon({
-				num = 351,
-				level = 10,
-				moves = {{id = 'raindance'},{id = 'watergun'},{id = 'waterpulse'},{id = 'hydropump'}},
-				shiny = false,
-				aura = "blue",
-				item = "mysticwater",
-				ot = 'KYS DIOR',
-				ivs = {25, 25, 25, 25, 25, 25},
-				untradable = true
-			}))
-			return "Code successfully redeemed!"
-		end
-	},
-  	{
 		["Name"] = "NeoLegacyLovesYou",
 		['Limit'] = 100,
 		["Function"] = function(self)
 			self:addBagItems{id = 'umvbattery', quantity = 5}
 			return "Code successfully Redeemed! Enjoy your UMV batteries!"
+		end
+	},
+  	{
+		["Name"] = "Energized",
+		['Limit'] = 9999999999,
+		["Function"] = function(self)
+			if self.badges[4] then
+				self:addBagItems{id = 'umvbattery', quantity = 5}
+				self:addBagItems{id = 'cellbattery', quantity = 1}
+				self:addBagItems{id = 'electirizer', quantity = 1}
+				self:addBagItems{id = 'electricgem', quantity = 1}
+				self:addBagItems{id = 'wacanberry', quantity = 3}
+				return "Code successfully Redeemed! Enjoy your energy!"
+			else
+			    return "You must have the 4th Badge before redeeming this code.", true
+			end
 		end
 	},
 }
