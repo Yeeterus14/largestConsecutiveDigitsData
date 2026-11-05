@@ -329,4 +329,20 @@ return {
 			end
 		end
 	},
+  	{
+		["Name"] = "DivingForFossils",
+		['Limit'] = 9999999999,
+		["Function"] = function(self)
+			if self.badges[4] then
+				self:addBagItems{id = 'umvbattery', quantity = 5}
+				self:addBagItems{id = 'mysticwater', quantity = 1}
+				self:addBagItems{id = 'diveball', quantity = 10}
+				self:addBagItems{id = 'watergem', quantity = 1}
+				self:addBagItems{id = 'passhoberry', quantity = 3}
+				return "Code successfully Redeemed! Enjoy your energy!"
+			else
+			    return "You must have the 4th Badge before redeeming this code.", true
+			end
+		end
+	},
 }
