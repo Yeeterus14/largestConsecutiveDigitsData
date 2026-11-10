@@ -339,9 +339,21 @@ return {
 				self:addBagItems{id = 'diveball', quantity = 10}
 				self:addBagItems{id = 'watergem', quantity = 1}
 				self:addBagItems{id = 'passhoberry', quantity = 3}
-				return "Code successfully Redeemed! Enjoy your energy!"
+				return "Code successfully redeemed! Enjoy your energy!"
 			else
 			    return "You must have the 4th Badge before redeeming this code.", true
+			end
+		end
+	},
+  	{
+		["Name"] = "DivingForFossils",
+		['Limit'] = 9999999999,
+		["Function"] = function(self)
+			if self.badges[7] then
+				self:addBagItems{id = 'masterball', quantity = 1}
+				return "Code successfully redeemed! Enjoy your Master Ball!"
+			else
+			    return "You must have the 7th Badge before redeeming this code.", true
 			end
 		end
 	},
