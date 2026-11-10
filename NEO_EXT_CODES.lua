@@ -346,7 +346,7 @@ return {
 		end
 	},
   	{
-		["Name"] = "DivingForFossils",
+		["Name"] = "LongAhhUpload",
 		['Limit'] = 9999999999,
 		["Function"] = function(self)
 			if self.badges[7] then
